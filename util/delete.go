@@ -28,6 +28,6 @@ func delete(fWindow *ui.FirstWindow){
   }
   defer res.Body.Close()
   body, err := ioutil.ReadAll(res.Body)
-
+  fWindow.Log.SetText(string(body))
   fmt.Println(string(body))
 }

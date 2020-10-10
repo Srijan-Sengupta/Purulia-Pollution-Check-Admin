@@ -31,6 +31,6 @@ func post(fWindow *ui.FirstWindow){
   body, err := ioutil.ReadAll(res.Body)
 
   fmt.Println(string(body))
-
+  fWindow.Log.SetText(string(body))
   print(method,url,payload)
 }
